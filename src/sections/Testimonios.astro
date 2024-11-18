@@ -1,0 +1,108 @@
+---
+import Testimonial from "../components/Testimonial.astro";
+import Section from "./Section.astro";
+---
+
+<Section title="Historias de éxito">
+  <div class="grid lg:grid-cols-[377px_1fr] gap-10">
+    <p>
+      Clubes deportivos, federaciones y atletas de élite que han mejorado su
+      rendimiento y alcanzado resultados excepcionales gracias a la innovación
+      en el análisis de datos y el soporte personalizado de <strong
+        >RiseData</strong
+      >.
+    </p>
+    <div class="testimonials-wrapper relative">
+      <div
+        class="testimonials flex overflow-x-auto snap-x snap-mandatory gap-10 border border-neutral-50/10 backdrop-blur-3xl mb-4"
+      >
+        <Testimonial class="testimonial snap-start">
+          <h3 class="text-2xl mb-2">Rivals FC</h3>
+          <p class="text-slate-400">
+            Gracias a RiseData, nuestros jugadores han mejorado su rendimiento
+            un 20% en solo 6 meses.
+          </p>
+        </Testimonial>
+        <Testimonial class="testimonial snap-start">
+          <h3 class="text-2xl mb-2">Realejo FC</h3>
+          <p class="text-slate-400">
+            Los modelos predictivos que utilizan en RiseData nos han ayudado a
+            prevenir lesiones y a maximizar la preparación de nuestros atletas.
+          </p>
+        </Testimonial>
+      </div>
+      <div class="dots flex justify-end gap-2">
+        <!-- Los puntos serán generados dinámicamente -->
+      </div>
+    </div>
+  </div>
+</Section>
+
+<style>
+  .testimonials::-webkit-scrollbar {
+    display: none;
+  }
+
+  .testimonials {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  :global(.dot) {
+    @apply w-3 h-3 rounded-full bg-neutral-50/10 cursor-pointer transition;
+  }
+
+  :global(.dot.active) {
+    @apply w-9 bg-slate-50;
+  }
+</style>
+
+<script is:inline>
+  document.addEventListener("DOMContentLoaded", function () {
+    const carouselItems = document.querySelectorAll(".testimonial");
+    const dotsContainer = document.querySelector(".dots");
+    let currentIndex = 0;
+
+    // Crear los puntos dinámicamente según el número de ítems
+    carouselItems.forEach((_, index) => {
+      const dot = document.createElement("div");
+      dot.classList.add("dot");
+      dot.addEventListener("click", () => goToSlide(index));
+      dotsContainer.appendChild(dot);
+    });
+
+    // Función para ir a una diapositiva específica
+    function goToSlide(index) {
+      const carousel = document.querySelector(".testimonials");
+      const scrollAmount = carouselItems[index].offsetWidth; // Ancho del ítem
+      carousel.scrollTo({
+        left: scrollAmount * index, // Desplazar a la posición deseada
+        behavior: "smooth", // Desplazamiento suave
+      });
+      updateDots(index);
+      currentIndex = index;
+    }
+
+    // Actualizar el estado de los puntos
+    function updateDots(index) {
+      const dots = document.querySelectorAll(".dot");
+      dots.forEach((dot) => dot.classList.remove("active"));
+      dots[index].classList.add("active");
+    }
+
+    // Inicializar los puntos
+    updateDots(currentIndex);
+
+    // Evento de desplazamiento para sincronizar los puntos con el scroll
+    const testimonials = document.querySelector(".testimonials");
+    testimonials.addEventListener("scroll", () => {
+      const index = Math.round(
+        testimonials.scrollLeft / carouselItems[0].offsetWidth
+      );
+      if (index !== currentIndex) {
+        updateDots(index);
+        currentIndex = index;
+      }
+    });
+  });
+</script>

@@ -1,19 +1,16 @@
 ---
-import Video from "../components/Video.astro";
 import Layout from "../layouts/Layout.astro";
+import Hero from "../sections/Hero.astro";
+import Innovacion from "../sections/Innovacion.astro";
+import Tecnologia from "../sections/Tecnologia.astro";
+import Testimonios from "../sections/Testimonios.astro";
+import Valores from "../sections/Valores.astro";
 ---
 
 <Layout title="Risedata">
-  <div class="grid place-items-center min-h-dvh p-10 relative">
-    <h1 class="hidden">Risedata</h1>
-    <img
-      src="/logo.webp"
-      alt="Risedata"
-      width="300"
-      height="89"
-      loading="lazy"
-    />
-
-    <Video />
-  </div>
+  <Hero />
+  <Valores />
+  <Tecnologia />
+  <Testimonios />
+  <Innovacion />
 </Layout>

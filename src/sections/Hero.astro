@@ -1,0 +1,39 @@
+---
+import Button from "../components/Button.astro";
+import BrandYoutube from "../components/icons/BrandYoutube.astro";
+---
+
+<section class="feah bg-center bg-cover relative">
+  <div class="container py-48">
+    <h2 class="text-6xl font-thin sm:text-7xl md:text-8xl lg:text-9xl mb-10">
+      Liderando la revolución tecnológica en el deporte de élite
+    </h2>
+    <div class="flex items-end gap-10 flex-wrap md:flex-nowrap">
+      <div>
+        <p>
+          En RiseData transformamos el rendimiento deportivo a través del
+          <strong>análisis avanzado de datos</strong>. Con inteligencia
+          artificial y machine learning, ofrecemos <strong
+            >soluciones personalizadas</strong
+          > que maximizan el potencial y optimizan el desempeño en diversas disciplinas.
+        </p>
+        <hr class="md:h-[33px]" />
+      </div>
+      <Button
+        href="https://www.youtube.com/watch?v=pjEsJra-sII"
+        text="Ver vídeo"
+      >
+        <BrandYoutube />
+      </Button>
+    </div>
+  </div>
+  <video
+    autoplay
+    loop
+    muted
+    playsinline
+    class="absolute top-0 left-0 w-full h-full object-cover -z-50 brightness-75"
+  >
+    <source src="/hero.mp4" type="video/mp4" />
+  </video>
+</section>
