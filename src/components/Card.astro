@@ -1,14 +1,16 @@
 ---
 interface Props {
+  id?: string;
   class?: string;
   title: string;
   content: string;
 }
 
-const { class: customClass, title, content } = Astro.props;
+const { id, class: customClass, title, content } = Astro.props;
 ---
 
 <div
+  id={id}
   class:list={[
     "border border-neutral-50/10 p-5 backdrop-blur-3xl",
     customClass,

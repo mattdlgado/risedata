@@ -1,36 +1,38 @@
 ---
 import Card from "../components/Card.astro";
+import SectionCards from "../components/SectionCards.astro";
 import Section from "./Section.astro";
 ---
 
 <Section title="Tecnología de vanguardia">
-  <div class="grid lg:grid-cols-[377px_1fr] gap-10">
-    <p>
-      En <strong>RiseData</strong>, aplicamos las tecnologías más avanzadas para
-      ofrecer soluciones de análisis de datos deportivos que marcan la
-      diferencia.
-    </p>
-    <div class="grid md:grid-cols-2 gap-5">
-      <Card
-        title="Inteligencia Artificial (IA)"
-        content="Modelos predictivos y aprendizaje profundo para anticipar resultados ymejorar el rendimiento."
-      />
-      <Card
-        title="Machine Learning"
-        content="Algoritmos que evolucionan constantemente a partir de los datos."
-      />
-      <Card
-        title="Análisis predictivo"
-        content="Anticipación de resultados, prevención de lesiones y optimización de entrenamientos."
-      />
-      <Card
-        title="Big Data"
-        content="Procesamiento de grandes volúmenes de datos en tiempo real para obtener insights detallados y estratégicos."
-      />
-    </div>
-  </div>
+  <p>
+    En <strong>RiseData</strong>, aplicamos las tecnologías más avanzadas para
+    ofrecer soluciones de análisis de datos deportivos que marcan la diferencia.
+  </p>
+  <SectionCards>
+    <Card
+      class="card"
+      title="Inteligencia Artificial (IA)"
+      content="Modelos predictivos y aprendizaje profundo para anticipar resultados ymejorar el rendimiento."
+    />
+    <Card
+      class="card"
+      title="Machine Learning"
+      content="Algoritmos que evolucionan constantemente a partir de los datos."
+    />
+    <Card
+      class="card"
+      title="Análisis predictivo"
+      content="Anticipación de resultados, prevención de lesiones y optimización de entrenamientos."
+    />
+    <Card
+      class="card"
+      title="Big Data"
+      content="Procesamiento de grandes volúmenes de datos en tiempo real para obtener insights detallados y estratégicos."
+    />
+  </SectionCards>
 </Section>
 
-<video autoplay loop muted playsinline class="w-full h-dvh object-cover">
+<video autoplay loop muted playsinline class="tvideo w-full h-0 object-cover">
   <source src="/tech.mp4" type="video/mp4" />
 </video>

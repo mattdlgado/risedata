@@ -4,37 +4,32 @@ import Section from "./Section.astro";
 ---
 
 <Section title="Historias de éxito">
-  <div class="grid lg:grid-cols-[377px_1fr] gap-10">
-    <p>
-      Clubes deportivos, federaciones y atletas de élite que han mejorado su
-      rendimiento y alcanzado resultados excepcionales gracias a la innovación
-      en el análisis de datos y el soporte personalizado de <strong
-        >RiseData</strong
-      >.
-    </p>
-    <div class="testimonials-wrapper relative">
-      <div
-        class="testimonials flex overflow-x-auto snap-x snap-mandatory gap-10 border border-neutral-50/10 backdrop-blur-3xl mb-4"
-      >
-        <Testimonial class="testimonial snap-start">
-          <h3 class="text-2xl mb-2">Rivals FC</h3>
-          <p class="text-slate-400">
-            Gracias a RiseData, nuestros jugadores han mejorado su rendimiento
-            un 20% en solo 6 meses.
-          </p>
-        </Testimonial>
-        <Testimonial class="testimonial snap-start">
-          <h3 class="text-2xl mb-2">Realejo FC</h3>
-          <p class="text-slate-400">
-            Los modelos predictivos que utilizan en RiseData nos han ayudado a
-            prevenir lesiones y a maximizar la preparación de nuestros atletas.
-          </p>
-        </Testimonial>
-      </div>
-      <div class="dots flex justify-end gap-2">
-        <!-- Los puntos serán generados dinámicamente -->
-      </div>
+  <p>
+    Clubes deportivos, federaciones y atletas de élite que han mejorado su
+    rendimiento y alcanzado resultados excepcionales gracias a la innovación en
+    el análisis de datos y el soporte personalizado de <strong>RiseData</strong
+    >.
+  </p>
+  <div class="testimonials-wrapper w-full">
+    <div
+      class="testimonials flex overflow-x-auto snap-x snap-mandatory gap-10 border border-neutral-50/10 backdrop-blur-3xl mb-4"
+    >
+      <Testimonial
+        class="testimonial snap-start"
+        name="Rivals FC"
+        photo=""
+        logo={["#", "Alt"]}
+        content="Gracias a RiseData, nuestros jugadores han mejorado su rendimiento un 20% en solo 6 meses."
+      />
+      <Testimonial
+        class="testimonial snap-start"
+        name="Realejo FC"
+        photo=""
+        logo={["#", "Alt"]}
+        content="Los modelos predictivos que utilizan en RiseData nos han ayudado aprevenir lesiones y a maximizar la preparación de nuestros atletas."
+      />
     </div>
+    <div class="dots flex justify-end gap-2"></div>
   </div>
 </Section>
 

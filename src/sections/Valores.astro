@@ -1,38 +1,41 @@
 ---
 import Card from "../components/Card.astro";
+import SectionCards from "../components/SectionCards.astro";
 import Proyectos from "./Proyectos.astro";
 import Section from "./Section.astro";
 ---
 
 <Section title="Nuestros valores">
-  <div class="grid lg:grid-cols-[377px_1fr] gap-10">
-    <p>
-      Nuestra misión es <strong
-        >potenciar al máximo el rendimiento deportivo</strong
-      > mediante soluciones basadas en el análisis avanzado de datos. Nos impulsa
-      la visión de <strong>ser referentes globales</strong> en la aplicación de inteligencia
-      artificial y machine learning, revolucionando la manera en que los atletas
-      alcanzan su mejor versión.
-    </p>
-    <div class="grid md:grid-cols-2 gap-5">
-      <Card
-        title="Innovación continua"
-        content="Lideramos la industria integrando las últimas tecnologías emergentes y avanzadas."
-      />
-      <Card
-        title="Soluciones personalizadas"
-        content="Nos adaptamos a cada cliente y proyecto, diseñando soluciones únicas ya medida."
-      />
-      <Card
-        title="Colaboración global"
-        content="Trabajamos con clubes, federaciones y atletas de élite en todo el mundo."
-      />
-      <Card
-        title="Desarrollo del talento"
-        content="Fomentamos el crecimiento constante de nuestro equipo y colaboramos con Immune Technology Institute para el desarrollo de expertos en ciencia de datos."
-      />
-    </div>
-  </div>
+  <p>
+    Nuestra misión es <strong
+      >potenciar al máximo el rendimiento deportivo</strong
+    > mediante soluciones basadas en el análisis avanzado de datos. Nos impulsa la
+    visión de <strong>ser referentes globales</strong> en la aplicación de inteligencia
+    artificial y machine learning, revolucionando la manera en que los atletas alcanzan
+    su mejor versión.
+  </p>
+  <SectionCards>
+    <Card
+      class="card"
+      title="Innovación continua"
+      content="Lideramos la industria integrando las últimas tecnologías emergentes y avanzadas."
+    />
+    <Card
+      class="card"
+      title="Soluciones personalizadas"
+      content="Nos adaptamos a cada cliente y proyecto, diseñando soluciones únicas ya medida."
+    />
+    <Card
+      class="card"
+      title="Colaboración global"
+      content="Trabajamos con clubes, federaciones y atletas de élite en todo el mundo."
+    />
+    <Card
+      class="card"
+      title="Desarrollo del talento"
+      content="Fomentamos el crecimiento constante de nuestro equipo y colaboramos con Immune Technology Institute para el desarrollo de expertos en ciencia de datos."
+    />
+  </SectionCards>
 </Section>
 
 <Proyectos />
