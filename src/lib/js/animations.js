@@ -1,63 +1,75 @@
+// LenisJS
 import Lenis from "lenis";
-
-// Initialize a new Lenis instance for smooth scrolling
 const lenis = new Lenis();
-
-// Synchronize Lenis scrolling with GSAP's ScrollTrigger plugin
 lenis.on("scroll", ScrollTrigger.update);
-
-// Add Lenis's requestAnimationFrame (raf) method to GSAP's ticker
-// This ensures Lenis's smooth scroll animation updates on each GSAP tick
 gsap.ticker.add((time) => {
-  lenis.raf(time * 1000); // Convert time from seconds to milliseconds
+  lenis.raf(time * 1000);
 });
-
-// Disable lag smoothing in GSAP to prevent any delay in scroll animations
 gsap.ticker.lagSmoothing(0);
 
+// GSAP
 import { gsap } from "gsap";
-
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { TextPlugin } from "gsap/TextPlugin";
+gsap.registerPlugin(ScrollTrigger);
 
-gsap.registerPlugin(ScrollTrigger, TextPlugin);
+// GSAP > Hero
+const feah = document.querySelector(".feah");
+const hero = document.querySelector(".hero");
+const mvideo = document.querySelector(".mvideo");
 
-// Seleccionar todas las tarjetas
+gsap.to(hero, {
+  y: 100,
+  scrollTrigger: {
+    trigger: feah,
+    start: "bottom bottom",
+    end: "bottom center",
+    scrub: 2,
+  },
+});
+
+gsap.to(mvideo, {
+  opacity: 0.1,
+  scrollTrigger: {
+    trigger: feah,
+    start: "bottom bottom",
+    end: "bottom top",
+    scrub: 2,
+  },
+});
+
+// GSAP > Cards
 const cards = document.querySelectorAll(".card");
 
-// Animar cada tarjeta
 cards.forEach((card, index) => {
   gsap.fromTo(
     card,
     {
-      x: 300, // Inicia fuera de la pantalla hacia la izquierda
-      opacity: 0, // Comienza invisible
+      x: 300,
+      opacity: 0,
     },
     {
-      x: 0, // Movimiento a la posición original
-      opacity: 1, // Se vuelve visible
-      duration: 1, // Duración de la animación
-      delay: index * 0.2, // Delay progresivo (0.2 segundos entre cada tarjeta)
+      x: 0,
+      opacity: 1,
+      delay: index * 0.2,
       scrollTrigger: {
         trigger: card,
-        start: "top 80%", // La animación comienza cuando la tarjeta está al 80% desde la parte superior de la pantalla
-        end: "top 30%", // Termina cuando la tarjeta está al 30% desde la parte superior de la pantalla
-        scrub: true, // Hace que el movimiento sea más suave
+        start: "top 80%",
+        end: "top 50%",
+        scrub: 1,
       },
     }
   );
 });
 
-// Selecciona el contenedor del video
-const videoContainer = document.querySelector(".tvideo");
+// GSAP > Data video
+const dataVideo = document.querySelector(".tvideo");
 
-// Animar el alto del contenedor con ScrollTrigger
-gsap.to(videoContainer, {
-  height: "100dvh", // Nuevo valor de altura al hacer scroll
+gsap.to(dataVideo, {
+  height: "100dvh",
   scrollTrigger: {
-    trigger: videoContainer, // El disparador de la animación es el contenedor del video
-    start: "top bottom", // La animación comienza cuando el contenedor llega al fondo de la pantalla
-    end: "bottom top", // La animación termina cuando el contenedor sale de la parte superior de la pantalla
-    scrub: true, // Hace que la animación sea más suave y controlada por el desplazamiento del scroll
+    trigger: dataVideo,
+    start: "top bottom",
+    end: "bottom top",
+    scrub: 1,
   },
 });

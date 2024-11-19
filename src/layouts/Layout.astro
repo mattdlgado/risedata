@@ -20,6 +20,11 @@ const { title } = Astro.props;
     <Header />
     <slot />
     <script src="../lib/js/animations.js"></script>
+    <script
+      is:inline
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/@justinribeiro/lite-youtube@1/lite-youtube.min.js"
+    ></script>
   </body>
 </html>
 
@@ -43,7 +48,7 @@ const { title } = Astro.props;
   }
 
   strong {
-    @apply bg-red;
+    @apply bg-red font-bold;
   }
 
   .feah {

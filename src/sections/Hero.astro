@@ -1,12 +1,9 @@
----
-import Button from "../components/Button.astro";
-import BrandYoutube from "../components/icons/BrandYoutube.astro";
----
-
-<section class="feah bg-center bg-cover relative">
-  <div class="container py-48">
+<section
+  class="feah bg-center bg-cover relative min-h-dvh grid place-items-center"
+>
+  <div class="hero container py-48">
     <h2 class="text-6xl font-thin sm:text-7xl md:text-8xl lg:text-9xl mb-10">
-      Liderando la revolución tecnológica en el deporte de élite
+      Liderando la <strong>revolución tecnológica</strong> en el deporte de élite
     </h2>
     <div class="flex items-end gap-10 flex-wrap md:flex-nowrap">
       <div>
@@ -17,14 +14,7 @@ import BrandYoutube from "../components/icons/BrandYoutube.astro";
             >soluciones personalizadas</strong
           > que maximizan el potencial y optimizan el desempeño en diversas disciplinas.
         </p>
-        <hr class="md:h-[33px]" />
       </div>
-      <Button
-        href="https://www.youtube.com/watch?v=pjEsJra-sII"
-        text="Ver vídeo"
-      >
-        <BrandYoutube />
-      </Button>
     </div>
   </div>
   <video
@@ -32,8 +22,32 @@ import BrandYoutube from "../components/icons/BrandYoutube.astro";
     loop
     muted
     playsinline
-    class="absolute top-0 left-0 w-full h-full object-cover -z-50 brightness-75"
+    class="mvideo fixed bottom-0 left-0 w-full h-full object-cover -z-50"
   >
     <source src="/hero.mp4" type="video/mp4" />
   </video>
 </section>
+
+<lite-youtube videoid="pjEsJra-sII" class="mx-auto z-10 md:w-2/3"
+></lite-youtube>
+
+<style>
+  h2 {
+    opacity: 0;
+    transform: translateY(100px);
+    animation: fadeInUp 500ms ease-in-out 500ms forwards;
+  }
+
+  h2 + div {
+    opacity: 0;
+    transform: translateY(100px);
+    animation: fadeInUp 500ms ease-in-out 600ms forwards;
+  }
+
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
