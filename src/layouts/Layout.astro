@@ -20,6 +20,7 @@ const { title } = Astro.props;
     <Header />
     <slot />
     <script src="../lib/js/animations.js"></script>
+    <script src="../lib/js/swipers.js"></script>
     <script
       is:inline
       type="module"
@@ -53,5 +54,9 @@ const { title } = Astro.props;
 
   .feah {
     @apply -mt-20;
+  }
+
+  .swiper-button-disabled {
+    @apply opacity-10;
   }
 </style>

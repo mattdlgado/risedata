@@ -1,0 +1,29 @@
+---
+interface Props {
+  image: string;
+  type: string;
+  no: string;
+  name: string;
+}
+
+const { image, type, no, name } = Astro.props;
+---
+
+<div
+  class="swiper-slide flex-shrink-0 border border-neutral-50/10 flex flex-col hover:bg-neutral-50 hover:text-blue transition"
+>
+  <img
+    src={image}
+    alt={name}
+    width="377"
+    height="377"
+    class="w-auto aspect-video object-cover"
+  />
+  <div class="p-5">
+    <p class="flex justify-between">
+      <span class="uppercase text-slate-400">{type}</span>
+      <span>{no}</span>
+    </p>
+    <h3 class="text-4xl font-thin">{name}</h3>
+  </div>
+</div>

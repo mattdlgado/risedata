@@ -1,0 +1,26 @@
+[
+  {
+    "image": "/images/placeholder.webp",
+    "type": "Tipo de proyecto",
+    "no": "01",
+    "name": "Nombre del proyecto"
+  },
+  {
+    "image": "/images/placeholder.webp",
+    "type": "Tipo de proyecto",
+    "no": "02",
+    "name": "Nombre del proyecto"
+  },
+  {
+    "image": "/images/placeholder.webp",
+    "type": "Tipo de proyecto",
+    "no": "03",
+    "name": "Nombre del proyecto"
+  },
+  {
+    "image": "/images/placeholder.webp",
+    "type": "Tipo de proyecto",
+    "no": "04",
+    "name": "Nombre del proyecto"
+  }
+]
