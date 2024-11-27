@@ -8,7 +8,7 @@ interface Props {
 const { name, photo, content } = Astro.props;
 ---
 
-<div class="border border-neutral-50/10 w-full p-5 flex gap-5">
+<div class="border border-neutral-50/10 flex-shrink-0 w-full p-5 flex gap-5">
   <img
     src={photo}
     alt={name}
