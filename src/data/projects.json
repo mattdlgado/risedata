@@ -1,26 +1,39 @@
 [
   {
-    "image": "/images/placeholder.webp",
-    "type": "Tipo de proyecto",
+    "image": "/images/1.webp",
+    "type": "Predicción del Rendimiento Deportivo",
     "no": "01",
-    "name": "Nombre del proyecto"
+    "name": "GamePulse"
   },
   {
-    "image": "/images/placeholder.webp",
-    "type": "Tipo de proyecto",
+    "image": "/images/2.webp",
+    "type": "Análisis de Tácticas y Estrategias",
     "no": "02",
-    "name": "Nombre del proyecto"
+    "name": "TactiMaster"
   },
   {
-    "image": "/images/placeholder.webp",
-    "type": "Tipo de proyecto",
+    "image": "/images/3.webp",
+    "type": "Prevención y Gestión de Lesiones",
     "no": "03",
-    "name": "Nombre del proyecto"
+    "name": "InjuryShield"
   },
   {
-    "image": "/images/placeholder.webp",
-    "type": "Tipo de proyecto",
+    "image": "/images/4.webp",
+    "type": "Análisis de Datos de Aficionados",
     "no": "04",
-    "name": "Nombre del proyecto"
+    "name": "FanInsights"
+  },
+  {
+    "image": "/images/5.webp",
+    "type": "Detección de Talento Deportivo",
+    "no": "05",
+    "name": "TalentRadar"
+  },
+  {
+    "image": "/images/6.webp",
+    "type": "Optimización del Valor del Banquillo",
+    "no": "06",
+    "name": "BenchValue"
   }
+  
 ]
