@@ -1,6 +1,6 @@
 import Swiper from "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs";
 
-var swiper = new Swiper(".projectsSwiper", {
+var pswiper = new Swiper(".projectsSwiper", {
   slidesPerView: 1,
   spaceBetween: 40,
   navigation: {
@@ -19,8 +19,9 @@ var swiper = new Swiper(".projectsSwiper", {
   },
 });
 
-var swiper = new Swiper(".testimonialsSwiper", {
+var tswiper = new Swiper(".testimonialsSwiper", {
   slidesPerView: 1,
+  spaceBetween: 40,
   navigation: {
     nextEl: ".testimonialsSwiper-button-next",
     prevEl: ".testimonialsSwiper-button-prev",
