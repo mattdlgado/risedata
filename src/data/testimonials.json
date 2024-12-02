@@ -1,7 +1,52 @@
 [
   {
-    "name": "Nombre del proyecto",
+    "name": "Juan Pérez, Responsable de Rendimiento en TrainingPro Sports.",
     "photo": "/images/placeholder.webp",
     "content": "Gracias a RiseData, nuestros jugadores han mejorado su rendimiento un 20% en solo 6 meses."
+  },
+  {
+    "name": " Carolina Hernández, Directora de Marketing en Bright Solutions.",
+    "photo": "/images/placeholder.webp",
+    "content": "Risedata transformó por completo nuestra estrategia empresarial. Gracias a su enfoque en análisis de datos, hemos optimizado nuestros procesos y aumentado nuestras ganancias en un 35% en solo 6 meses."
+  },
+  {
+    "name": "Sara Vega, Directora de Rendimiento en DreamTeam Sports.",
+    "photo": "/images/placeholder.webp",
+    "content": "El nivel de detalle y precisión de los análisis de Risedata es simplemente impresionante. Con su ayuda, hemos reducido un 20% los costos operativos al identificar ineficiencias ocultas en nuestros procesos."
+  },
+  {
+    "name": "Fernando Ruiz, Jefe de Marketing en Thunderball Team.",
+    "photo": "/images/placeholder.webp",
+    "content": "Trabajar con Risedata ha sido una experiencia increíble. No solo son expertos en lo que hacen, sino que también priorizan la colaboración y el entendimiento de nuestras necesidades específicas."
+  },
+  {
+    "name": "Andrés López, Entrenador del Equipo X-Gaming Elite.",
+    "photo": "/images/placeholder.webp",
+    "content": "Gracias a Risedata, entendimos cómo optimizar nuestras estrategias en el campo. Sus análisis nos permitieron identificar patrones de juego y mejorar nuestro rendimiento en los últimos partidos de la temporada. ¡Un equipo de campeones trabajando con nosotros!"
+  },
+  {
+    "name": "Paula Sánchez, Analista Táctica del Fútbol Club Dinámico.",
+    "photo": "/images/placeholder.webp",
+    "content": "El equipo de Risedata siempre está disponible y dispuesto a adaptarse. Gracias a su enfoque personalizado, logramos diseñar soluciones específicas para nuestros retos empresariales"
+  },
+  {
+    "name": " Fernando Ruiz, Cofundador de Green Metrics.",
+    "photo": "/images/placeholder.webp",
+    "content": "Risedata nos proporcionó insights accionables que duplicaron nuestras ventas en línea en solo un trimestre. Su combinación de tecnología avanzada y estrategia empresarial es incomparable."
+  },
+  {
+    "name": "Nombre del proyecto",
+    "photo": "/images/placeholder.webp",
+    "content": "Gracias a las soluciones de Risedata, mejoramos la retención de clientes en un 25% y nuestras campañas ahora son mucho más efectivas. Su trabajo ha marcado la diferencia."
+  },
+  {
+    "name": "Daniela Pérez, Directora de Estrategia en Alpha Business Group",
+    "photo": "/images/placeholder.webp",
+    "content": "Llevamos tres años trabajando con Risedata, y cada proyecto con ellos es una mejora constante. Su innovación y enfoque estratégico nos han permitido mantenernos competitivos en un mercado tan cambiante."
+  },
+  {
+    "name": "Carolina Herrera, Directora de Formación en Academia Futuro.",
+    "photo": "/images/placeholder.webp",
+    "content": "Risedata nos permitió personalizar nuestros entrenamientos basándonos en datos reales de cada jugador. Esto ha acelerado el desarrollo de talento joven en nuestra academia. Una herramienta imprescindible para el futuro del deporte."
   }
 ]
